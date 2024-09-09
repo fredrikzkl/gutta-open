@@ -2,13 +2,9 @@ import { vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
-const goBaseName = '/gutta-open/';
-
 export default defineConfig({
-  base: goBaseName,
   plugins: [
     remix({
-      basename: goBaseName,
       ssr: false,
       future: {
         v3_fetcherPersist: true,
