@@ -4,8 +4,13 @@ export default {
   content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {},
+    container: {
+      center: true,
+      padding: '2rem',
+    },
   },
-  plugins: [
-    require('daisyui'),
-  ],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["dim"],
+  },
 } satisfies Config;
