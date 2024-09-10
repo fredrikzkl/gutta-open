@@ -2,6 +2,7 @@ import EventCard from "./EventCard"
 import hamburgerImg from "../images/hamburger.png";
 import breakfastImg from "../images/breakfast.png";
 import dinnerImg from "../images/dinner.png";
+import fyllagolfImg from "../images/fyllagolf.jpg";
 
 export const FridayProgram = () => {
     return (
@@ -47,6 +48,14 @@ export const SaturdayProgram = () => (
             </>
         </EventCard>
         <EventCard
+            title="Fyllagolf 🍺 (Multibanan)"
+            imgSrc={fyllagolfImg}
+        >
+            <>
+                <h3>17:29</h3>
+            </>
+        </EventCard>
+        <EventCard
             title="Middag"
             imgSrc={dinnerImg}
         >
@@ -70,7 +79,7 @@ export const SundayProgram = () => (
             title="Nya Banan"
             imgSrc={"https://www.oijared.se/wp-content/uploads/2022/12/Golf.varagolfbanor_slide.jpg"}
         >
-            <h3>08:33</h3>
+            <h3>12:03</h3>
         </EventCard>
     </div>
 )
