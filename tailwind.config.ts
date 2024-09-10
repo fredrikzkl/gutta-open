@@ -9,7 +9,10 @@ export default {
       padding: '2rem',
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [
+    require("@tailwindcss/typography"), 
+    require("daisyui")
+  ],
   daisyui: {
     themes: ["dim"],
   },

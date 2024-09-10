@@ -1,8 +1,9 @@
 import EventCard from "./EventCard"
 import hamburgerImg from "../images/hamburger.png";
 import breakfastImg from "../images/breakfast.png";
-import dinnerImg from "../images/dinner.png";
+import dinnerImg from "../images/dinner.jpg";
 import fyllagolfImg from "../images/fyllagolf.jpg";
+import { useNavigate } from "@remix-run/react";
 
 export const FridayProgram = () => {
     return (
@@ -28,7 +29,13 @@ export const FridayProgram = () => {
     )
 }
 
-export const SaturdayProgram = () => (
+export const SaturdayProgram = () => {
+    const navigate = useNavigate();
+
+    const fyllaGolfOnClick =() => {
+        navigate("/fylla");
+    }
+    return(
     <div>
         <EventCard
             title="Frokost"
@@ -53,6 +60,13 @@ export const SaturdayProgram = () => (
         >
             <>
                 <h3>17:29</h3>
+                <div className="card-actions justify-end">
+                    <button 
+                        onClick={fyllaGolfOnClick}
+                        className="btn btn-primary">
+                            Les mer
+                    </button>
+                </div>
             </>
         </EventCard>
         <EventCard
@@ -62,7 +76,8 @@ export const SaturdayProgram = () => (
             <h3>19:00</h3>
         </EventCard>
     </div>
-)
+    )
+}
 
 export const SundayProgram = () => (
     <div>
