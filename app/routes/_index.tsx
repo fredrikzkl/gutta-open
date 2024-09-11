@@ -1,5 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../components/Header";
 
 import { FridayProgram, SaturdayProgram, SundayProgram } from "~/components/Programs";
@@ -11,12 +11,24 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+
+const tab_key = "last-visited-tab";
+
 export default function Index() {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabOnClick = (index : number) => {
     setActiveTab(index);
+    window.localStorage.setItem(tab_key, index.toString());
   }
+
+  useEffect(() => {
+    let lastVisitedTab = window.localStorage.getItem(tab_key);
+    if (!lastVisitedTab || lastVisitedTab === '' || lastVisitedTab === 'null') {
+      window.localStorage.setItem(tab_key, '0');
+    }
+    setActiveTab(Number(lastVisitedTab));
+  }, []);
 
   const GetDailyProgram = () => {
     switch (activeTab) {
@@ -30,15 +42,15 @@ export default function Index() {
   }
 
   return (
-    <div className="p-6">
+    <div className="p-10 max-w-xl mx-auto">
+
       <Header/>
 
-      <div role="tablist" className="tabs tabs-boxed tabs-lg mb-8">
+      <div role="tablist" className="tabs tabs-boxed tabs-lg mb-12 mt-8">
         <a role="tab" className={`tab ${activeTab == 0 && 'tab-active'}`} onClick={() => tabOnClick(0)}>Fredag</a>
         <a role="tab" className={`tab ${activeTab == 1 && 'tab-active'}`} onClick={() => tabOnClick(1)}>Lørdag</a>
         <a role="tab" className={`tab ${activeTab == 2 && 'tab-active'}`} onClick={() => tabOnClick(2)}>Søndag</a>
       </div>
-
       {GetDailyProgram()}
     </div>
   );
