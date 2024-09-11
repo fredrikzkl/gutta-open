@@ -15,7 +15,6 @@ export default function Strokeplay() {
                 <ul>
                     <li>Taperflighten først ut</li>
                     <li>1 strategisk Mulligan per spiller (Gjelder kun front 9)</li>
-                    <li>1 Bonusslag pr vunnet runde</li>
                     <li>Maksslag pr hull: Par * 2 + 2</li>
                     <li>
                         <p><strong>Back 9</strong></p>
@@ -25,7 +24,13 @@ export default function Strokeplay() {
 
                 <p className="text-amber-300">Spilleren med lavest antall slag etter 18 hull på Nya Banan, er vinner av Gutta Open 2024</p>
 
-                <h4>Bonusslag bassert på plassering</h4>
+                <h3>Bonusslag</h3>
+
+                <p>
+                    Seiere i tidligere runder belønnes med 1 bonusslag
+                </p>
+
+                <h4>Samlet plassering fra tidligere runder  </h4>
                 <table className="table table-zebra table-lg">
                     <thead>
                         <tr>
@@ -70,7 +75,7 @@ export default function Strokeplay() {
                     </tbody>
                 </table>
 
-                <h4>Bonusslag bassert på HCP</h4>
+                <h4>Handicap</h4>
                 <table className="table table-zebra table-lg">
                     <thead>
                         <tr>

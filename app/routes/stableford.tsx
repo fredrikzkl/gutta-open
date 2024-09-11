@@ -13,6 +13,14 @@ export default function Scramble() {
                 <p><strong>Tilleggskonkurranser</strong></p>
                 <ul>
                     <li>
+                        <p><strong>Lone Wolf</strong></p>
+                        <p>
+                        Alle har 1 mulighet til å melde «Lone Wolf». 
+                        Dette må gjøres før noen har tatt utslag. Om mann får bedre score enn de andre på flighten så dobles stablefordpoengene gitt på det hullet.
+                        Taper man eller spiller likt, scores ingen poeng.
+                        </p>
+                    </li>
+                    <li>
                         <p>Longest Drive hull 1</p>
                     </li>
                     <li>

@@ -32,8 +32,8 @@ export default function Fylla() {
           </li>
           <li>
             <p><strong>Poeng</strong></p>
-            <p>Vinneren av vinnergruppen får første plass (+3 poeng), mens taper av vinnergruppen får andre plass (+2 poeng)</p>
-            <p>Vinneren av tapergruppen får tredje plass (+1 poeng), mens taper av tapergruppen får 0 poeng</p>
+            <p>Vinneren av vinnergruppen får første plass (+5 poeng), mens taper av vinnergruppen får andre plass (+3 poeng)</p>
+            <p>Vinneren av tapergruppen får tredje plass (+2 poeng), mens taper av tapergruppen får 0 poeng</p>
           </li>
         </ul>
       </article>
