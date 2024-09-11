@@ -30,7 +30,7 @@ export default function Index() {
   }
 
   return (
-    <div className="p-6">
+    <div className="p-6 max-w-xl mx-auto">
       <Header/>
 
       <div role="tablist" className="tabs tabs-boxed tabs-lg mb-8">
@@ -38,7 +38,6 @@ export default function Index() {
         <a role="tab" className={`tab ${activeTab == 1 && 'tab-active'}`} onClick={() => tabOnClick(1)}>Lørdag</a>
         <a role="tab" className={`tab ${activeTab == 2 && 'tab-active'}`} onClick={() => tabOnClick(2)}>Søndag</a>
       </div>
-
       {GetDailyProgram()}
     </div>
   );
