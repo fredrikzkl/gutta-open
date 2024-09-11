@@ -13,7 +13,9 @@ const EventCard = ({ title, imgSrc, time, course, children }: props) => {
             <figure>
                 <img
                     src={imgSrc}
-                    alt={`${title}-img`} />
+                    alt={`${title}-img`}
+                    className='data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100/10'
+                />
             </figure>
             <div className="card-body">
                 <h3>{time}</h3>
