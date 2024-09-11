@@ -1,3 +1,4 @@
+import EventPage from "~/components/EventPage";
 import Header from "../components/Header";
 
 import { BeerIcon } from "../icons/icons";
@@ -5,11 +6,7 @@ import { BeerIcon } from "../icons/icons";
 
 export default function Fylla() {
   return (
-    <div className="p-6">
-      <Header />
-      <div className="text-center p-10 sm:p-2 mb-2">
-        <h2 className="text-3xl">Fyllagolf 🍺</h2>
-      </div>
+    <EventPage title={"Fyllagolf 🍺"} course={"Multibanan"} time={"Lørdag: 17:29"}>
       <article className="prose max-w-xl mx-auto my-10 ">
         <h3>Format: Single-Elimination Matchplay </h3>
         <p>
@@ -40,6 +37,7 @@ export default function Fylla() {
           </li>
         </ul>
       </article>
+      {/*
       <div className="max-w-xl mx-auto">
         <div className="divider">Runde 1</div>
         <ul className="timeline timeline-vertical">
@@ -126,6 +124,7 @@ export default function Fylla() {
           </li>
         </ul>
       </div>
-    </div>
+       */}
+    </EventPage>
   )
 };

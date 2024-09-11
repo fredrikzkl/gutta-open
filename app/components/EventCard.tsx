@@ -26,17 +26,6 @@ const EventCard = ({ title, imgSrc, time, course, children }: props) => {
                     }
                     {children}
                 </div>
-                {/*
-            <ul>
-            <li>To per lag</li>
-            <li>Lag basert på handicap (nærmeste sammen)</li>
-            <li>HCP= Gjennomsnittlig handicap x 0,65. Sjekk slope for tildelte slag</li>
-            <li>Plusspoeng for hvert slag under eget par.</li>
-            <li>Minuspoeng over. </li>
-          </ul>
-          <p>En tvungen reverse scramble i løpet av runden (taktisk valg av hull)</p>
-          */}
-
             </div>
         </div>
     )

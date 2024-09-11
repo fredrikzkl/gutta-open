@@ -1,31 +1,39 @@
 import EventCard from "./EventCard"
-import hamburgerImg from "../images/hamburger.png";
-import breakfastImg from "../images/breakfast.png";
+import breakfastImg from "../images/frokost.jpg";
 import dinnerImg from "../images/dinner.jpg";
-import fyllagolfImg from "../images/fyllagolf.jpg";
 import { useNavigate } from "@remix-run/react";
 
+
+import spiseMiddag from '../images/spise-1.jpg';
+
+import fyllagolfImg from "../images/fyllagolf.jpg";
+import stablefordImg from '../images/stableford.jpg';
+import scrambleImg from '../images/scramble.jpg'
+import championImg from '../images/champion.jpg'
+
 export const FridayProgram = () => {
+    const navigate = useNavigate();
+
     return (
         <div>
             <EventCard
                 title="Scramble"
-                imgSrc="https://www.oijared.se/wp-content/uploads/2022/12/Kristihimmelfardspaket_puff_2020.jpg"
+                imgSrc={scrambleImg}
                 course="Parkbanan"
                 time="13:36"
             >
                 <div className="card-actions justify-end">
-                    <button 
-                        onClick={() => console.log("Les mer")}
+                    <button
+                        onClick={() => navigate("/scramble")}
                         className="btn btn-primary">
-                            Les mer
+                        Les mer
                     </button>
                 </div>
             </EventCard>
 
             <EventCard
                 title="Hamburgere"
-                imgSrc={hamburgerImg}
+                imgSrc={spiseMiddag}
                 time="20:00"
             />
         </div>
@@ -35,61 +43,75 @@ export const FridayProgram = () => {
 export const SaturdayProgram = () => {
     const navigate = useNavigate();
 
-    const fyllaGolfOnClick =() => {
-        navigate("/fylla");
-    }
-    return(
-    <div>
-        <EventCard
-            title="Frokost"
-            imgSrc={breakfastImg}
-            time="07:00-10:30"
-        />
+    return (
+        <div>
+            <EventCard
+                title="Frokost"
+                imgSrc={breakfastImg}
+                time="07:00-10:30"
+            />
 
-        <EventCard
-            title="Stableford"
-            imgSrc={"https://www.oijared.se/wp-content/uploads/2023/03/exempelbilder-4-scaled.jpg"}
-            course="Gamlebanen"
-            time="10:00"
-        >
-        </EventCard>
-        <EventCard
-            title="Fyllagolf 🍺"
-            imgSrc={fyllagolfImg}
-            course="Multibanan"
-            time="17:29"
-        >
-            <>
+            <EventCard
+                title="Stableford"
+                imgSrc={stablefordImg}
+                course="Gamlebanen"
+                time="10:00"
+            >
                 <div className="card-actions justify-end">
-                    <button 
-                        onClick={fyllaGolfOnClick}
+                    <button
+                        onClick={() => navigate("/stableford")}
                         className="btn btn-primary">
-                            Les mer
+                        Les mer
                     </button>
                 </div>
-            </>
-        </EventCard>
-        <EventCard
-            title="Middag"
-            imgSrc={dinnerImg}
-            time="19:00"
-        />
-    </div>
+            </EventCard>
+            <EventCard
+                title="Fyllagolf 🍺"
+                imgSrc={fyllagolfImg}
+                course="Multibanan"
+                time="17:29"
+            >
+                <div className="card-actions justify-end">
+                    <button
+                        onClick={() => navigate("/fylla")}
+                        className="btn btn-primary">
+                        Les mer
+                    </button>
+                </div>
+            </EventCard>
+            <EventCard
+                title="Middag"
+                imgSrc={dinnerImg}
+                time="19:00"
+            />
+        </div>
     )
 }
 
-export const SundayProgram = () => (
-    <div>
-        <EventCard
-            title="Frokost"
-            imgSrc={breakfastImg}
-            time="07:00-10:30"
-        />
-        <EventCard
-            title="Strokeplay"
-            imgSrc={"https://www.oijared.se/wp-content/uploads/2022/12/Golf.varagolfbanor_slide.jpg"}
-            course="Nya Banan"
-            time="12:03"
-        />
-    </div>
-)
+export const SundayProgram = () => {
+    const navigate = useNavigate();
+    return (
+        <div>
+            <EventCard
+                title="Frokost"
+                imgSrc={breakfastImg}
+                time="07:00-10:30"
+            />
+            <EventCard
+                title="Championship Flight 🏆"
+                imgSrc={championImg}
+                course="Nya Banan"
+                time="12:03"
+
+            >
+                <div className="card-actions justify-end">
+                    <button
+                        onClick={() => navigate("/championflight")}
+                        className="btn btn-primary">
+                        Les mer
+                    </button>
+                </div>
+            </EventCard>
+        </div>
+    )
+}
