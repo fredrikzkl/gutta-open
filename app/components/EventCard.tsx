@@ -10,7 +10,7 @@ type props = {
 const EventCard = ({ title, imgSrc, time, course, children }: props) => {
     return (
         <div className="card bg-base-100 max-w-96 shadow-xl mx-auto mb-6">
-            <figure>
+            <figure className="min-h-52">
                 <img
                     src={imgSrc}
                     alt={`${title}-img`}
