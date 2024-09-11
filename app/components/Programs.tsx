@@ -2,7 +2,6 @@ import EventCard from "./EventCard"
 
 import { useNavigate } from "@remix-run/react";
 
-
 import spiseMiddag from '../images/spise-2.jpg';
 
 import breakfastImg from "../images/frokost-2.jpg";
