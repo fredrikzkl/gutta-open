@@ -30,5 +30,12 @@ export default function App() {
 }
 
 export function HydrateFallback() {
-  return <p>Loading...</p>;
+  return (
+    <div className="hero bg-base-200 min-h-screen">
+      <div className="hero-content text-center">
+        <div className="max-w-md">
+          <span className="loading loading-spinner loading-lg"></span>
+        </div>
+      </div>
+    </div>)
 }
