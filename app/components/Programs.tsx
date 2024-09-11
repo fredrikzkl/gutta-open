@@ -1,15 +1,17 @@
 import EventCard from "./EventCard"
-import breakfastImg from "../images/frokost.jpg";
-import dinnerImg from "../images/dinner.jpg";
+
 import { useNavigate } from "@remix-run/react";
 
 
-import spiseMiddag from '../images/spise-1.jpg';
+import spiseMiddag from '../images/spise-2.jpg';
 
-import fyllagolfImg from "../images/fyllagolf.jpg";
-import stablefordImg from '../images/stableford.jpg';
-import scrambleImg from '../images/scramble.jpg'
-import championImg from '../images/champion.jpg'
+import breakfastImg from "../images/frokost-2.jpg";
+import dinnerImg from "../images/dinner-2.jpg";
+
+import fyllagolfImg from "../images/fyllagolf-2.jpg";
+import stablefordImg from '../images/stableford-2.jpg';
+import scrambleImg from '../images/scramble-2.jpg'
+import championImg from '../images/champion-2.jpg'
 
 export const FridayProgram = () => {
     const navigate = useNavigate();
