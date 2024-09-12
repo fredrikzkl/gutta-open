@@ -1,4 +1,4 @@
-import EventPage from "~/components/EventPage";
+import PageBody from "~/components/PageBody";
 import Header from "../components/Header";
 
 import { BeerIcon } from "../icons/icons";
@@ -6,8 +6,8 @@ import { BeerIcon } from "../icons/icons";
 
 export default function Fylla() {
   return (
-    <EventPage title={"Fyllagolf 🍺"} course={"Multibanan"} time={"Lørdag: 17:29"}>
-      <article className="prose max-w-xl mx-auto my-10 ">
+    <PageBody title={"Fyllagolf 🍺"} course={"Multibanan"} time={"Lørdag: 17:29"}>
+      <article className="prose">
         <h3>Format: Single-Elimination Matchplay </h3>
         <p>
           Flightsene trekkes tilfeldig.
@@ -125,6 +125,6 @@ export default function Fylla() {
         </ul>
       </div>
        */}
-    </EventPage>
+    </PageBody>
   )
 };

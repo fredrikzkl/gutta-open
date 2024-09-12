@@ -1,3 +1,4 @@
+import { useState } from "react";
 
 type props = {
     title: string;
@@ -8,8 +9,15 @@ type props = {
 }
 
 const EventCard = ({ title, imgSrc, time, course, children }: props) => {
+    const [opacityValue, setOpacityValue] = useState("opacity-0");
+    const fadeIn = "transition-opacity duration-500 ease-in";
+
+    setTimeout(() => {
+        setOpacityValue("opacity-100");
+    }, 25);
+
     return (
-        <div className="card bg-base-100 max-w-96 shadow-xl mx-auto mb-6">
+        <div className={`card bg-base-100 max-w-96 shadow-xl mx-auto mb-6 ${fadeIn} ${opacityValue}`}>
             <figure className="min-h-52">
                 <img
                     src={imgSrc}

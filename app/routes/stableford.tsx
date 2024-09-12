@@ -1,14 +1,14 @@
-import EventPage from "../components/EventPage";
+import PageBody from "../components/PageBody";
 
 
 export default function Scramble() {
     return (
-        <EventPage
+        <PageBody
             title="Stableford"
             course="Gamlebanen"
             time="Lørdag: 10:00"
         >
-            <article className="prose max-w-xl mx-auto my-10 ">
+            <article className="prose">
                 <p>Individuelt spill. Poeng basert på Stableford med HCP</p>
                 <p><strong>Tilleggskonkurranser</strong></p>
                 <ul>
@@ -30,6 +30,6 @@ export default function Scramble() {
                     </li>
                 </ul>
             </article>
-        </EventPage>
+        </PageBody>
     )
 };

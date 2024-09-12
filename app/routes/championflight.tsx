@@ -1,14 +1,14 @@
-import EventPage from "../components/EventPage";
+import PageBody from "../components/PageBody";
 
 
 export default function Strokeplay() {
     return (
-        <EventPage
+        <PageBody
             title="Championship Flight"
             course="Nya Banan"
             time="Søndag: 12:03"
         >
-            <article className="prose max-w-xl mx-auto my-10 ">
+            <article className="prose">
                 <h3>Format: Strokeplay ⛳️</h3>
                 <p>Flight bestemmes av poeng fra runde 1-3. Om likt i antall poeng vil plass avgjøres basert på en tilleggskonkurranse (eventuelt laveste HCP)</p>
 
@@ -100,6 +100,6 @@ export default function Strokeplay() {
                     </tbody>
                 </table>
             </article>
-        </EventPage>
+        </PageBody>
     )
 };

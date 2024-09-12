@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Header from "../components/Header";
 
 import { FridayProgram, SaturdayProgram, SundayProgram } from "~/components/Programs";
+import PageBody from "~/components/PageBody";
 
 export const meta: MetaFunction = () => {
   return [
@@ -42,16 +43,13 @@ export default function Index() {
   }
 
   return (
-    <div className="p-10 max-w-xl mx-auto">
-
-      <Header/>
-
-      <div role="tablist" className="tabs tabs-boxed tabs-lg mb-12 mt-8">
+    <PageBody title={""}>
+      <div role="tablist" className="tabs tabs-boxed tabs-lg mb-12">
         <a role="tab" className={`tab ${activeTab == 0 && 'tab-active'}`} onClick={() => tabOnClick(0)}>Fredag</a>
         <a role="tab" className={`tab ${activeTab == 1 && 'tab-active'}`} onClick={() => tabOnClick(1)}>Lørdag</a>
         <a role="tab" className={`tab ${activeTab == 2 && 'tab-active'}`} onClick={() => tabOnClick(2)}>Søndag</a>
       </div>
       {GetDailyProgram()}
-    </div>
+    </PageBody>
   );
 }

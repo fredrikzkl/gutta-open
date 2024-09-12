@@ -1,10 +1,10 @@
-import EventPage from "~/components/EventPage";
+import PageBody from "~/components/PageBody";
 
 
 export default function Scramble() {
     return (
-        <EventPage title={"Scramble 🙍‍♂️🙍‍♂️"} course={"Parkbanan"} time={"Fredag: 13:36"} >
-            <article className="prose max-w-xl mx-auto my-10 ">
+        <PageBody title={"Scramble 🙍‍♂️🙍‍♂️"} course={"Parkbanan"} time={"Fredag: 13:36"} >
+            <article className="prose ">
                 <p>To spillere per lag. Lagene trekkes tilfeldig. Det spilles vanlig stableford med scramble HCP</p>
                 <ul>
                     <li>
@@ -19,6 +19,6 @@ export default function Scramble() {
                     </li>
                 </ul>
             </article>
-        </EventPage>
+        </PageBody>
     )
 };
