@@ -83,7 +83,7 @@ export const SaturdayProgram = () => {
             <EventCard
                 title="Middag"
                 imgSrc={dinnerImg}
-                time="19:00"
+                time="20:00"
             />
         </div>
     )
